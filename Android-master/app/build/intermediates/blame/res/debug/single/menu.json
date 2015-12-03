@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/menu/start.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/menu/start.xml"
+    },
+    {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/menu/edit_item.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/menu/edit_item.xml"
+    },
+    {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/menu/show_all.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/menu/show_all.xml"
+    }
+]
