@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",

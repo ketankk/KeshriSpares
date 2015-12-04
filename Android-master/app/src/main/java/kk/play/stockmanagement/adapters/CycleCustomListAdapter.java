@@ -1,5 +1,6 @@
 package kk.play.stockmanagement.adapters;
 
+import java.io.File;
 import java.util.List;
 
 import kk.play.stockmanagement.R;
@@ -10,7 +11,10 @@ import kk.play.stockmanagement.utils.EditItem;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v4.view.ViewPager.LayoutParams;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -71,7 +75,7 @@ public class CycleCustomListAdapter extends BaseAdapter {
 		name = (TextView) vi.findViewById(R.id.name); // cycle name
 		quantity = (TextView) vi.findViewById(R.id.quant); // quantity
 		ImageView cycleImage = (ImageView) vi.findViewById(R.id.cycle_image); // thumb
-		// image
+
 		description = (TextView) vi.findViewById(R.id.description); // cycle
 		// name
 		cycle = cycles.get(position);// Get cycle from list of cycles using
@@ -82,27 +86,15 @@ public class CycleCustomListAdapter extends BaseAdapter {
 		lastUpdatedOn.setText(cycle.getLastUpdatedDate());
 		updateTime.setText(cycle.getLastUpdatedTime());
 		quantity.setText(cycle.getQuantity() + "");
-		serverUrl += cycle.getImage();
-		
-		String imgurl="http://www.hypercityindia.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/a/maxit_enduro_50_mx_cycle.jpg";
-		cycle.setImage(imgurl);
-		//new ImageDownload(cycleImage).execute(cycle.getImage());// Load
+
+
+		File imgfile=new File(cycle.getImage());
 		// image
-		// Asynchronously
+		if(imgfile.exists()){
+			Bitmap myBitmap= BitmapFactory.decodeFile(imgfile.getAbsolutePath());
 
-		if (imageloader == null) {
-			imageloader = ApplicationController.getInstance().getImageLoader();
+			cycleImage.setImageBitmap(myBitmap);
 		}
-		// NetworkImageView
-		// cycleImage=(NetworkImageView)vi.findViewById(R.id.cycle_image);
-		/**
-		 * CACHE used for uploading image...not working as on 20-10-2015...check
-		 * LruBitmapCache class
-		 */
-		// cycleImage.setImageUrl("http://bit.ly/1jXCKkH",imageloader);//change
-		// the url of image****
-		//cycleImage.setImageBitmap(BitmapFactory.decodeFile("http://www.hypercityindia.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/m/a/maxit_enduro_50_mx_cycle.jpg"));
-
 		description.setText(cycle.getDescription());
 		vi1.setOnClickListener(new OnClickListener() {
 

@@ -76,10 +76,6 @@
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-hdpi/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
-        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/drawable-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_action_search.png",
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/drawable-hdpi/ic_action_search.png"
     },

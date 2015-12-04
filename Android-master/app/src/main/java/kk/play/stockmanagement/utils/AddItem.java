@@ -180,7 +180,7 @@ price=(EditText) findViewById(R.id.price);
 			cycle.setImage(inputImg);
 		else
 			
-            image.setImageAlpha(R.drawable.minus);
+            image.setImageAlpha(R.drawable.ic_launcher);
 
 		if (isValid(inputSize))
 

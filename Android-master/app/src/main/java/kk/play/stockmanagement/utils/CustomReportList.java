@@ -22,9 +22,7 @@ public class CustomReportList extends BaseAdapter {
 		this.activity=activity;
 
 		DailyReportDBHandler handler=new DailyReportDBHandler(activity);
-		Log.d("CustomReportList", "CustomReportList1");
 		this.reports=handler.getReport();
-		Log.d("CustomReportList", "CustomReportList11");
 
 		inflater = (LayoutInflater) activity
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
