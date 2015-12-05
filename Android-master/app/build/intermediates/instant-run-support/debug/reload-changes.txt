@@ -1,12 +1,1 @@
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/activities/DailyReport$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/activities/StartActivity$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/R$layout$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/activities/MainActivity$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/R$id$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/R$styleable$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/R$xml$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/R$integer$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/R$menu$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/R$style$override.class
-/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/kk/play/stockmanagement/R$string$override.class
 /home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/com/android/build/gradle/internal/incremental/AppPatchesLoaderImpl.class

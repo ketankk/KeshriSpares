@@ -22,7 +22,7 @@
             android:id="@+id/cycle_image"
             android:layout_width="120dip"
             android:layout_height="100dip"
-            android:src="@drawable/error" />
+             />
 
     </LinearLayout>
 

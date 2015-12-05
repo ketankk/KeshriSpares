@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
-    },
-    {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
@@ -26,10 +26,6 @@
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/companieslist.xml",
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/layout/companieslist.xml"
-    },
-    {
-        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/reportgraph.xml",
-        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/layout/reportgraph.xml"
     },
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/notification_media_action.xml",
@@ -134,10 +130,6 @@
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/drawer_layout.xml",
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/layout/drawer_layout.xml"
-    },
-    {
-        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/reportgraph1.xml",
-        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/layout/reportgraph1.xml"
     },
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/activity_main.xml",

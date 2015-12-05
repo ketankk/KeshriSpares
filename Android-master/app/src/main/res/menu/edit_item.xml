@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="kk.play.stockmanagement.EditItem" >
+    tools:context="kk.play.keshrispares.EditItem" >
 
     <item
         android:id="@+id/action_settings"
