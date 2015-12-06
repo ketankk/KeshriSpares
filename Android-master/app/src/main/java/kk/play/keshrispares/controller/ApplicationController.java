@@ -1,7 +1,6 @@
 package kk.play.keshrispares.controller;
 
 
-import kk.play.keshrispares.utils.LruBitmapCache;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,14 +33,6 @@ public class ApplicationController extends Application{
 			mRequestQueue = Volley.newRequestQueue(getApplicationContext());
 		}
 		return mRequestQueue;
-	}
-	public ImageLoader getImageLoader() {
-		getRequestQueue();
-		if (mImageLoader == null) {
-			mImageLoader = new ImageLoader(this.mRequestQueue,
-					new LruBitmapCache());
-		}
-		return mImageLoader;
 	}
 
 	public <T> void addToRequestQueue(Request<T> req, String tag) {

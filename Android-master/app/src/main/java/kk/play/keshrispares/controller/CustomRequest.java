@@ -6,6 +6,7 @@ import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
 import com.android.volley.Request;
@@ -39,9 +40,9 @@ public class CustomRequest extends Request<JSONArray>{
     }
 
   @Override
-  protected Map<String, String> getParams() throws com.android.volley.AuthFailureError {
+  protected Map<String, String> getParams() throws AuthFailureError {
     return params;
-  };
+  }
 
   @Override
   protected void deliverResponse(JSONArray response) {

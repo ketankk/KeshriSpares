@@ -21,7 +21,6 @@ import com.android.volley.VolleyError;
 public class VolleyServerUpdater {
 	Context context;
 	String tag = "string_req";
-List<Cycle> cycles;
 	public VolleyServerUpdater(Context context) {
 		super();
 		this.context = context;
@@ -29,7 +28,7 @@ List<Cycle> cycles;
 
 	public void updateServerDB(String url,Cycle cycle) {
 		
-		Map<String, String> params = new HashMap<String, String>();
+		Map<String, String> params = new HashMap();
 			params.put("id", cycle.getId()+"");	
 			params.put("compname", cycle.getCompName());
 			params.put("modelname", cycle.getModelName());

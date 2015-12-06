@@ -1,5 +1,6 @@
 package kk.play.keshrispares.activities;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +29,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
 
 public class EditItem extends Activity implements OnClickListener{
 	EditText compNameEdit;
@@ -89,29 +92,30 @@ Button deleteButton;
 		compNameEdit.setText(cycle.getCompName());
 		modelNameEdit.setText(cycle.getModelName());
 	inputImgPath=cycle.getImage();
-		//imageEdit.setImageBitmap(BitmapFactory.decodeFile(cycle.getImage()));
-        new LoadImage(inputImgPath,imageEdit).execute();
-		descEdit.setText(cycle.getDescription());
+       // new LoadImage(inputImgPath,imageEdit).execute();
+        Picasso.with(this).load(new File(inputImgPath)).resize(100,100).        into(imageEdit);
+
+        descEdit.setText(cycle.getDescription());
 		sizeEdit.setText(cycle.getSize() + "");
 		//final String inputSynced=cycle.getSynced();
 
 		quantityEdit.setText(cycle.getQuantity() + "");
 priceEdit.setText(cycle.getPrice());
-		List<String> colorList = new ArrayList<String>();
+		List<String> colorList = new ArrayList();
 		colorList.add("Red");
 		colorList.add("Green");
 		colorList.add("Black");
 		colorList.add("Violet");
 		colorList.add("Others");
 		// list type changed
-		ArrayAdapter<String> adp1 = new ArrayAdapter<String>(
+		ArrayAdapter<String> adp1 = new ArrayAdapter(
 				getApplicationContext(), android.R.layout.simple_list_item_1,
 				colorList);
 		adp1.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
 		colorEdit.setAdapter(adp1);
 
 		typeEdit = (Spinner) findViewById(R.id.edittype);
-		List<String> typeList = new ArrayList<String>();
+		List<String> typeList = new ArrayList();
 		typeList.add("Gents");
 		typeList.add("Ladies");
 		typeList.add("Kids");
@@ -132,7 +136,7 @@ priceEdit.setText(cycle.getPrice());
 			}
 		});
 
-		ArrayAdapter<String> adp2 = new ArrayAdapter<String>(
+		ArrayAdapter<String> adp2 = new ArrayAdapter(
 				getApplicationContext(), android.R.layout.simple_list_item_1,
 				typeList);
 		adp2.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
@@ -326,7 +330,8 @@ priceEdit.setText(cycle.getPrice());
 
 			Cursor cursor = getContentResolver().query(selectedImage,
 					filePathColumn, null, null, null);
-			cursor.moveToFirst();
+	if(cursor!=null)
+					cursor.moveToFirst();
 
 			int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
 			inputImgPath = cursor.getString(columnIndex);
