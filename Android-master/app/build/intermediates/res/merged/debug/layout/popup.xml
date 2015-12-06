@@ -85,8 +85,7 @@
         android:layout_marginLeft="50dp"
         android:textColor="#FAEA0B21"
         android:textSize="20sp"
-android:hint="change date"
-        android:onClick="Datepicker"
+        android:hint="change date"
         android:text="dd-mm-yyyy">
     </TextView>
 </RelativeLayout>

@@ -38,7 +38,7 @@ public class AddItem extends Activity implements OnClickListener {
 	EditText price;
 
 	Spinner type;
-	Spinner color;
+	Spinner colors;
 	ProgressDialog pdialog;
 	Button addButton;
 	String inputcompName;
@@ -71,7 +71,7 @@ public class AddItem extends Activity implements OnClickListener {
 		size = (EditText) findViewById(R.id.size);
 		quantity = (EditText) findViewById(R.id.quantity);
 price=(EditText) findViewById(R.id.price);
-		color = (Spinner) findViewById(R.id.color);
+		colors = (Spinner) findViewById(R.id.color);
 
 		List<String> colorList = new ArrayList<String>();
 		colorList.add("Red");
@@ -84,7 +84,7 @@ price=(EditText) findViewById(R.id.price);
 				getApplicationContext(), android.R.layout.simple_list_item_1,
 				colorList);
 		adp1.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
-		color.setAdapter(adp1);
+		colors.setAdapter(adp1);
 
 		type = (Spinner) findViewById(R.id.type);
 		List<String> typeList = new ArrayList<String>();
@@ -93,7 +93,7 @@ price=(EditText) findViewById(R.id.price);
 		typeList.add("Kids");
 		typeList.add("Others");
 
-		ArrayAdapter<String> adp2 = new ArrayAdapter<String>(
+		ArrayAdapter<String> adp2 = new ArrayAdapter(
 				getApplicationContext(), android.R.layout.simple_list_item_1,
 				typeList);
 		adp2.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
@@ -145,7 +145,7 @@ price=(EditText) findViewById(R.id.price);
 
 		//inputImg = image;
 		inputDesc = desc.getText().toString();
-		inputColor = color.getSelectedItem().toString();
+		inputColor = colors.getSelectedItem().toString();
 		inputSize = size.getText().toString();
 		inputQuant = quantity.getText().toString();
 		inputType = type.getSelectedItem().toString();

@@ -14,6 +14,7 @@ import kk.play.keshrispares.utils.PopupHandler;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,6 @@ public class ModelCustomListAdapter extends BaseAdapter {
     private TextView lastUpdatedOn;
     private TextView name;
     private TextView description;
-
 
     private static LayoutInflater inflater = null;
     boolean viewGroupIsVisible = true;
@@ -127,6 +127,7 @@ public class ModelCustomListAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return position;
     }
+
 
 
 }

@@ -20,7 +20,7 @@ import android.widget.ListView;
 public class StartActivity extends Activity {
 	Notification notification;
 	NotificationManager notificationManager;
-	Intent intent1,intent2;
+	Intent intent1,intent3,intent2;
 	ActionBarDrawerToggle mDrawerToggle;
 	String mTitle;
 DrawerLayout mDrawerLayout;
@@ -61,15 +61,15 @@ ListView mDrawerList;
 		});
 
 		ImageButton btn3 = (ImageButton) findViewById(R.id.btn3);
-		intent2 = new Intent(this, CycleDisplayActivity.class);
+		intent3 = new Intent(this, CycleDisplayActivity.class);
 
-		btn2.setOnClickListener(new OnClickListener() {
+		btn3.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
 				//GenerateNotification();
 
-				startActivity(intent2);
+				startActivity(intent3);
 
 			}
 		});

@@ -84,7 +84,7 @@
                         android:paddingLeft="50dp"
                         android:paddingRight="20dp"
                         android:paddingTop="20dp"
-                        android:src="@drawable/cyclewheels"/>
+                        android:src="@drawable/placeholder"/>
 
 
                     <ImageButton
