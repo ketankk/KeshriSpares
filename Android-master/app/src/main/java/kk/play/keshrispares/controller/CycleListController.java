@@ -21,7 +21,7 @@ public class CycleListController{
 		
 		CycleCustomListAdapter adp = new CycleCustomListAdapter(activity, cycles);
 
-		ListView lview = (ListView) rootView.findViewById(R.id.list);
+		ListView lview = (ListView) rootView.findViewById(R.id.companylist);
 
 		lview.setAdapter(adp);
 

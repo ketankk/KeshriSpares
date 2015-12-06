@@ -112,6 +112,10 @@
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/cycles_models.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/layout/cycles_models.xml"
+    },
+    {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/activity_show_all.xml",
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/layout/activity_show_all.xml"
     },
@@ -158,6 +162,10 @@
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/activity_cycle_display.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/src/main/res/layout/activity_cycle_display.xml"
     },
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",

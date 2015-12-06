@@ -6,6 +6,8 @@ import java.util.List;
 import kk.play.keshrispares.R;
 import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.entity.Cycle;
+import kk.play.keshrispares.utils.LoadImage;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -16,6 +18,7 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -85,11 +88,12 @@ Button deleteButton;
 		deleteButton=(Button)findViewById(R.id.deleteItem);
 		compNameEdit.setText(cycle.getCompName());
 		modelNameEdit.setText(cycle.getModelName());
-
-		imageEdit.setImageBitmap(BitmapFactory.decodeFile(cycle.getImage()));
+	inputImgPath=cycle.getImage();
+		//imageEdit.setImageBitmap(BitmapFactory.decodeFile(cycle.getImage()));
+        new LoadImage(inputImgPath,imageEdit).execute();
 		descEdit.setText(cycle.getDescription());
 		sizeEdit.setText(cycle.getSize() + "");
-		final String inputSynced=cycle.getSynced();
+		//final String inputSynced=cycle.getSynced();
 
 		quantityEdit.setText(cycle.getQuantity() + "");
 priceEdit.setText(cycle.getPrice());
@@ -112,7 +116,9 @@ priceEdit.setText(cycle.getPrice());
 		typeList.add("Ladies");
 		typeList.add("Kids");
 		typeList.add("Others");
-
+/**
+ * Updating images
+ */
 		imageEdit.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -139,8 +145,8 @@ priceEdit.setText(cycle.getPrice());
 				backToMain();
 			}
 		});
-
-		editButton.setOnClickListener(new OnClickListener() {
+        Log.d("Heelo","ff");
+        editButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -194,7 +200,7 @@ priceEdit.setText(cycle.getPrice());
 					priceEdit.setError("Enter Price");
 
 				cycle.setType(inputType);
-				cycle.setSynced(inputSynced);
+				cycle.setSynced("0");
 
 				if (isValid(inputImgPath) && isValid(inputCompName)
 						&& isValid(inputDesc) && isValid(inputQuant)
@@ -252,7 +258,7 @@ priceEdit.setText(cycle.getPrice());
 	}
 
 	void backToMain() {
-		Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+		Intent intent = new Intent(getApplicationContext(), StockManagementActivity.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
 		startActivity(intent);

@@ -31,40 +31,9 @@ ListView mDrawerList;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_start);
 
-		/*mPlanetTitles=new String[]{"One","Two","Three"};
-		mTitle="test";
-		mDrawerLayout=(DrawerLayout)findViewById(R.id.drawerlayout);
-		 mDrawerList = (ListView) findViewById(R.id.left_drawer);
-		mDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_layout,mPlanetTitles));
-		mDrawerToggle = new ActionBarDrawerToggle(
-                this,                   host Activity 
-                mDrawerLayout,          DrawerLayout object 
-                R.drawable.ic_action_search,   nav drawer icon to replace 'Up' caret 
-                R.string.drawer_open
-        ) {
 
-            *//** Called when a drawer has settled in a completely closed state. *//*
-            public void onDrawerClosed(View view) {
-                getActionBar().setTitle(mTitle);
-            }
-
-            *//** Called when a drawer has settled in a completely open state. *//*
-            public void onDrawerOpened(View drawerView) {
-                getActionBar().setTitle(mTitle);
-            }
-        };
-
-        // Set the drawer toggle as the DrawerListener
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
-
-
-   
-*/		
 		ImageButton btn1 = (ImageButton) findViewById(R.id.btn1);
-		intent1 = new Intent(this, MainActivity.class);
+		intent1 = new Intent(this, StockManagementActivity.class);
 
 		btn1.setOnClickListener(new OnClickListener() {
 
@@ -91,15 +60,27 @@ ListView mDrawerList;
 			}
 		});
 
-	
+		ImageButton btn3 = (ImageButton) findViewById(R.id.btn3);
+		intent2 = new Intent(this, CycleDisplayActivity.class);
+
+		btn2.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				//GenerateNotification();
+
+				startActivity(intent2);
+
+			}
+		});
 	}
 
 	void GenerateNotification() {
 
-		Context context = getApplicationContext();
+		/*Context context = getApplicationContext();
 		Intent myIntent = new Intent(context, StartActivity.class);
 		PendingIntent pendingIntent = PendingIntent.getActivity(
-				StartActivity.this, 0, myIntent, Intent.FLAG_ACTIVITY_NEW_TASK);
+				StartActivity.this, 0, myIntent, Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		notification = new Notification.Builder(context)
 				.setContentTitle("StockManagement")
 				.setContentText("You have new Notification!")
@@ -110,7 +91,7 @@ ListView mDrawerList;
 
 				.build();
 		notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-		notificationManager.notify(1, notification);
+		notificationManager.notify(1, notification);*/
 	}
 
 	@Override

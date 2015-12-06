@@ -15,7 +15,7 @@ public View createView(List<String> companies, View rootView, Activity activity,
 		
 		CompanyCustomListAdapter adp = new CompanyCustomListAdapter(activity, companies,type);
 
-		ListView lview = (ListView) rootView.findViewById(R.id.list);
+		ListView lview = (ListView) rootView.findViewById(R.id.companylist);
 
 		lview.setAdapter(adp);
 

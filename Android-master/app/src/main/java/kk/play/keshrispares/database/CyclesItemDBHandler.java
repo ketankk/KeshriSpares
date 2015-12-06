@@ -1,6 +1,8 @@
 package kk.play.keshrispares.database;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import kk.play.keshrispares.entity.Cycle;
@@ -230,10 +232,14 @@ public class CyclesItemDBHandler extends SQLiteOpenHelper {
 	public boolean updateQuantity(long id, int quantity, boolean flag) {
 		// flag true(1) for sold..false(0) for Adding more cycles
 		db = this.getWritableDatabase();
+		String time=new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
+
 		ContentValues values = new ContentValues();
 		values.put(itemId, id);
 		values.put(QUANTITY, quantity);
+		values.put(TIME,time);
 		values.put(FLAG, flag);
+
 		if (db.insert(SALES_TABLE_NAME, null, values) > 0)// primary key of
 			// inserted
 		{ // quantity,-1 if
