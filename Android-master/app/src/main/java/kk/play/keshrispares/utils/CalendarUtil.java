@@ -15,12 +15,16 @@ public class CalendarUtil {
     private static int date;
 public static void setCurrentDate(View view)
 {
-    Calendar calendar=Calendar.getInstance();
-    year=calendar.get(Calendar.YEAR);
-    month=calendar.get(Calendar.MONTH);
-    date=calendar.get(Calendar.DATE);
-    StringBuilder str=new StringBuilder();
+
     TextView d=(TextView)view;
-d.setText(  str.append(date+"-").append(month+1).append("-"+year));
+d.setText( getCurrentDate() );
 }
+    public static String getCurrentDate(){
+        Calendar calendar=Calendar.getInstance();
+        year=calendar.get(Calendar.YEAR);
+        month=calendar.get(Calendar.MONTH);
+        date=calendar.get(Calendar.DATE);
+        StringBuilder str=new StringBuilder();
+        return date+"-"+(month+1)+"-"+year;
+    }
 }

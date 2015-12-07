@@ -30,7 +30,7 @@ public class ShowAllCycles extends Activity {
 		
 		Bundle extras=getIntent().getExtras();
 		String type=extras.getString("type");
-		String companyName=extras.getString("compname");
+		final String companyName=extras.getString("compname");
 		CyclesItemDBHandler dbHandler = new CyclesItemDBHandler(this);
 
 		compName=(TextView)findViewById(R.id.compname1);
@@ -38,7 +38,6 @@ public class ShowAllCycles extends Activity {
 		fabView=(FloatingActionButton)findViewById(R.id.fab);
 		List<Cycle> cycles = dbHandler.getCyclesByTypeComp(type,companyName);
 		Log.d("date",System.currentTimeMillis()+" --"+new SimpleDateFormat("dd-MM-yyyy").format(Calendar.getInstance().getTime()));
-		Log.d("showall", "jj");
 
 		ModelCustomListAdapter adp = new ModelCustomListAdapter(this, cycles);
 
@@ -51,19 +50,9 @@ final CoordinatorLayout coordinatorLayout=(CoordinatorLayout) findViewById(R.id.
 			@Override
 			public void onClick(View v) {
 				Intent intent=new Intent(ShowAllCycles.this,AddItem.class);
-
+                intent.putExtra("compname",companyName);
 				startActivity(intent);
-				/*Snackbar snackbar = Snackbar
-						.make(coordinatorLayout, "Message is deleted", Snackbar.LENGTH_LONG)
-						.setAction("UNDO", new View.OnClickListener() {
-							@Override
-							public void onClick(View view) {
-								Snackbar snackbar1 = Snackbar.make(coordinatorLayout, "Message is restored!", Snackbar.LENGTH_SHORT);
-								snackbar1.show();
-							}
-						});
 
-				snackbar.show();*/
 			}
 		});
 		

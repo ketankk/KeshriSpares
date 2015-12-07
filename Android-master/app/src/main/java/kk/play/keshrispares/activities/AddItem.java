@@ -7,6 +7,7 @@ import java.util.List;
 import kk.play.keshrispares.R;
 import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.entity.Cycle;
+import kk.play.keshrispares.utils.CalendarUtil;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -59,6 +60,8 @@ public class AddItem extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_item);
+		Bundle extras=getIntent().getExtras();
+
 
 		addButton = (Button) findViewById(R.id.addButton);
 
@@ -70,9 +73,12 @@ public class AddItem extends Activity implements OnClickListener {
 		desc = (EditText) findViewById(R.id.desc);
 		size = (EditText) findViewById(R.id.size);
 		quantity = (EditText) findViewById(R.id.quantity);
-price=(EditText) findViewById(R.id.price);
+		price=(EditText) findViewById(R.id.price);
 		colors = (Spinner) findViewById(R.id.color);
-
+		if(extras!=null) {
+			final String companyName = extras.getString("compname");
+			compname.setText(companyName);
+		}
 		List<String> colorList = new ArrayList<String>();
 		colorList.add("Red");
 		colorList.add("Green");
@@ -203,12 +209,13 @@ price=(EditText) findViewById(R.id.price);
 				&& isValid(inputQuant) && isValid(inputSize)) {
 
 		pdialog.show();
+            final String date= CalendarUtil.getCurrentDate();
 
 		CyclesItemDBHandler itemHandler = new CyclesItemDBHandler(
 				getApplication());
 		long itemId = itemHandler.addNewCycle(cycle);
 		if (itemId != -1) {
-			if (itemHandler.updateQuantity(itemId, cycle.getQuantity(), false))
+			if (itemHandler.updateQuantity(itemId, cycle.getQuantity(),date, false))
 				Toast.makeText(getApplicationContext(),
 						"Added item named " + cycle.getCompName(),
 						Toast.LENGTH_SHORT).show();

@@ -21,7 +21,6 @@ public class DailyReportDBHandler {
 	
 	public List<Report> getReport(){
 		handler=new CyclesItemDBHandler(context);
-		Log.d("Inside Listreport method", "msg");
 		List<String> dates=handler.getAllDistinctDates();
 		for(String date:dates){
 			long quant=handler.getTotalSales(date);

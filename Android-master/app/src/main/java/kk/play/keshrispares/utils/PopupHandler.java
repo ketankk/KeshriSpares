@@ -2,6 +2,8 @@ package kk.play.keshrispares.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,6 +29,7 @@ public class PopupHandler {
     private TextView datePicker;
     private Activity activity;
 private EditText newQuantity;
+    CoordinatorLayout coordinatorLayout;
     public PopupHandler() {
     }
     public PopupHandler(View view, Context context, LayoutInflater inflater) {
@@ -37,9 +40,11 @@ private EditText newQuantity;
 
     }
 
-    public void popup(Cycle cycle){
+    public void popup(final Cycle cycle){
         final String compName=cycle.getCompName();
         final long cycle_id=cycle.getId();
+
+       final String date=CalendarUtil.getCurrentDate();
         view.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -79,12 +84,13 @@ private EditText newQuantity;
                             final int updatedQuantity = Integer
                                     .parseInt(newQuantity.getText().toString());
 
-                            Toast.makeText(context, updatedQuantity + "",
-                                    Toast.LENGTH_SHORT).show();
+
                             CyclesItemDBHandler itemHandler = new CyclesItemDBHandler(
                                     activity);
-                            itemHandler.updateQuantity(cycle_id,
-                                    updatedQuantity, false);
+                            boolean flag =itemHandler.updateQuantity(cycle_id,
+                                    updatedQuantity,date, false);
+                            if(flag)
+                                showSnackbar(updatedQuantity+" "+cycle.getModelName()+" Added");
 
                         }
                     }
@@ -101,12 +107,12 @@ private EditText newQuantity;
                             final int updatedQuantity = Integer
                                     .parseInt(newQuantity.getText().toString());
 
-                            Toast.makeText(activity, updatedQuantity + "",
-                                    Toast.LENGTH_SHORT).show();
                             CyclesItemDBHandler itemHandler = new CyclesItemDBHandler(
                                     activity);
-                            itemHandler.updateQuantity(cycle_id,
-                                    updatedQuantity, true);
+                            boolean flag=itemHandler.updateQuantity(cycle_id,
+                                    updatedQuantity,date, true);
+                            if(flag)
+                                showSnackbar(updatedQuantity+" "+cycle.getModelName()+" Sold");
                         }
                     }
                 });
@@ -115,5 +121,13 @@ private EditText newQuantity;
 
         });
 
+
+    }
+    public  void showSnackbar(String msg){
+        coordinatorLayout =(CoordinatorLayout) activity.findViewById(R.id.coordinatorlayout);
+        Snackbar snackbar = Snackbar
+                .make(coordinatorLayout, msg, Snackbar.LENGTH_LONG);
+
+        snackbar.show();
     }
 }

@@ -14,6 +14,7 @@ import kk.play.keshrispares.utils.PopupHandler;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.view.LayoutInflater;
@@ -110,8 +111,34 @@ public class ModelCustomListAdapter extends BaseAdapter {
                 return true;
             }
         });
+        setBackgroundColor(vi,cycle.getColor());
         return vi;
     }
+
+    public void setBackgroundColor(View vi,String color){
+        int colorcode= Color.DKGRAY;
+        switch (color){
+            case "Red":
+                colorcode=Color.parseColor("#FFF2424B");
+                break;
+            case "Black":
+                colorcode=Color.BLACK;
+
+                break;
+            case "Green":
+                colorcode=Color.parseColor("#FF087604");
+
+                break;
+            case "Violet":
+                colorcode=Color.parseColor("#FF7F05DC");
+
+                break;
+            default:
+                break;
+        }
+        vi.setBackgroundColor(colorcode);
+    }
+
 
     @Override
     public int getCount() {

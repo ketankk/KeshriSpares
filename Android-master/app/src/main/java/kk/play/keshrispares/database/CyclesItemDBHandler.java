@@ -229,7 +229,7 @@ public class CyclesItemDBHandler extends SQLiteOpenHelper {
 		return salesid;
 	}
 
-	public boolean updateQuantity(long id, int quantity, boolean flag) {
+	public boolean updateQuantity(long id, int quantity, String date,boolean flag) {
 		// flag true(1) for sold..false(0) for Adding more cycles
 		db = this.getWritableDatabase();
 		String time=new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
@@ -238,7 +238,9 @@ public class CyclesItemDBHandler extends SQLiteOpenHelper {
 		values.put(itemId, id);
 		values.put(QUANTITY, quantity);
 		values.put(TIME,time);
+		values.put(DATE,date);
 		values.put(FLAG, flag);
+
 
 		if (db.insert(SALES_TABLE_NAME, null, values) > 0)// primary key of
 			// inserted
