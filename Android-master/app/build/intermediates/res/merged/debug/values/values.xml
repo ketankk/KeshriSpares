@@ -291,7 +291,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_report">Report</string>
     <string name="title_activity_reportgraph1">MainActivity</string>
-    <string name="title_activity_show_all">ShowAllActivity</string>
+    <string name="title_activity_show_all_models">ShowAllActivity</string>
     <string name="title_activity_start">Keshri Spares</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>

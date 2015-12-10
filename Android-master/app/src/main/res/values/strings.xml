@@ -19,7 +19,7 @@
     <string name="drawer_open">Open</string>
     <string name="title_activity_edit_item">EditItem</string>
     <string name="title_activity_report">Report</string>
-    <string name="title_activity_show_all">ShowAllActivity</string>
+    <string name="title_activity_show_all_models">ShowAllActivity</string>
     <string name="title_activity_reportgraph1">MainActivity</string>
     <string name="title_activity_login">Sign in</string>
 

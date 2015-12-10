@@ -3,7 +3,7 @@ package kk.play.keshrispares.adapters;
 import java.util.List;
 
 import kk.play.keshrispares.R;
-import kk.play.keshrispares.activities.ShowAllCycles;
+import kk.play.keshrispares.activities.ModelsDisplay;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -65,7 +65,7 @@ vi.setOnClickListener(new OnClickListener() {
 	public void onClick(View arg0) {
 		Log.d("ddd", name1+type);
 		//Toast.makeText(activity, name1+type, Toast.LENGTH_LONG).show();
-		Intent intent=new Intent(activity,ShowAllCycles.class);
+		Intent intent=new Intent(activity,ModelsDisplay.class);
 		intent.putExtra("compname", name1);
 		intent.putExtra("type", type);
 		activity.startActivity(intent);

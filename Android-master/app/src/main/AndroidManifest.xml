@@ -63,14 +63,12 @@
             android:name=".activities.DailyReport"
             android:label="@string/title_activity_report" />
         <activity
-            android:name=".activities.ShowAllCycles"
-            android:label="@string/title_activity_show_all" />
+            android:name=".activities.ModelsDisplay"
+            android:label="@string/title_activity_show_all_models" />
 
         <receiver
             android:name=".utils.BroadCastReceiver"
-            android:enabled="true"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
+            > <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -79,7 +77,7 @@
 
         <service android:name=".utils.StockManagementService" />
 
-        <activity android:name=".activities.CycleDisplayActivity"></activity>
+        <activity android:name=".activities.DisplayCycles"></activity>
     </application>
 
 </manifest>

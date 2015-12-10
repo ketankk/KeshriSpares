@@ -21,7 +21,7 @@ import kk.play.keshrispares.R;
 import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.entity.Cycle;
 
-public class CycleDisplayActivity extends Activity {
+public class DisplayCycles extends Activity {
 
     private Spinner types;
     private Spinner compNames;
@@ -34,6 +34,7 @@ public class CycleDisplayActivity extends Activity {
     private String selectedCompName;
     private String selectedModelName;
     private String selectedSize;
+    private  List<String> companies;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +66,7 @@ public class CycleDisplayActivity extends Activity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 populateSizes(parent.getSelectedItem().toString(),cycles);
+
             }
 
             @Override
@@ -76,9 +78,12 @@ public class CycleDisplayActivity extends Activity {
 
     }
 
-    public void populatecompNames(View view){
+    public void populatecompNames(String selsize,List<String> companies){
 
-        List<String> compList=new ArrayList();
+       ArrayAdapter<String> adp=new ArrayAdapter(this,android.R.layout.simple_list_item_1,companies);
+
+        compNames.setAdapter(adp);
+        adp.setDropDownViewResource(android.R.layout.simple_list_item_multiple_choice);
 
 
 
@@ -105,15 +110,13 @@ public class CycleDisplayActivity extends Activity {
     }
 
     public void populateSizes(String type,List<Cycle> cycles){
-        ProgressDialog progressDialog=ProgressDialog.show(this,"","",true);
         Set<String> sizeList=new HashSet<>();
         String sel=type;
         if(sel.equals("All"))
-            sel=new String("GentsLadiesKidsOthers");
+            sel="GentsLadiesKidsOthers";
 
         for(Cycle cycle:cycles){
             if(sel.contains(cycle.getType())) {
-                Log.d("Sizee", sel + " nn" + cycle.getSize());
                 sizeList.add(cycle.getSize() + "\"");
             }
         }
@@ -125,7 +128,9 @@ public class CycleDisplayActivity extends Activity {
         sizes.setAdapter(adp);
         adp.setDropDownViewResource(android.R.layout.simple_list_item_multiple_choice);
         selectedSize=sizes.getSelectedItem().toString();
-        progressDialog.dismiss();
+        companies =handler.getListOfCompaniesBytype(type);
+
+        populatecompNames(selectedSize,companies);
     }
 }
 

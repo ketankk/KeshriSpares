@@ -4,8 +4,6 @@ import kk.play.keshrispares.R;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -61,7 +59,7 @@ ListView mDrawerList;
 		});
 
 		ImageButton btn3 = (ImageButton) findViewById(R.id.btn3);
-		intent3 = new Intent(this, CycleDisplayActivity.class);
+		intent3 = new Intent(this, DisplayCycles.class);
 
 		btn3.setOnClickListener(new OnClickListener() {
 

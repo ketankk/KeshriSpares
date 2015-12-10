@@ -29,31 +29,35 @@ import android.widget.Toast;
 
 public class AddItem extends Activity implements OnClickListener {
 
-	EditText compname;
-	EditText modelname;
+	private EditText compname;
+    private EditText modelname;
 
-	ImageView image;
-	EditText desc;
-	EditText size;
-	EditText quantity;
-	EditText price;
+    private ImageView image;
+    private EditText desc;
+    private EditText size;
+    private EditText quantity;
+    private EditText price;
 
-	Spinner type;
-	Spinner colors;
-	ProgressDialog pdialog;
-	Button addButton;
-	String inputcompName;
-	String inputmodelName;
+    private Spinner type;
+    private Spinner colors;
+    private ProgressDialog pdialog;
+    private Button addButton;
+    private String inputcompName;
+    private String inputmodelName;
 
-	String inputImg;
-	String inputDesc;
-	String inputColor;
-	String inputSize;
-	String inputQuant;
-	String inputType;
-	String inputPrice;
+    private String inputImg;
+    private String inputDesc;
+    private String inputColor;
+    private String inputSize;
+    private String inputQuant;
+    private String inputType;
+    private String inputPrice;
 
-	Cycle cycle;
+    private Cycle cycle;
+
+    private String comingfrom;
+    private String companyName_;
+    private String type_;
     private static int RESULT_LOAD_IMAGE = 1;
 
 	@Override
@@ -61,7 +65,7 @@ public class AddItem extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_item);
 		Bundle extras=getIntent().getExtras();
-
+        comingfrom=extras.getString("ComingFrom");
 
 		addButton = (Button) findViewById(R.id.addButton);
 
@@ -75,25 +79,23 @@ public class AddItem extends Activity implements OnClickListener {
 		quantity = (EditText) findViewById(R.id.quantity);
 		price=(EditText) findViewById(R.id.price);
 		colors = (Spinner) findViewById(R.id.color);
-		if(extras!=null) {
-			final String companyName = extras.getString("compname");
-			compname.setText(companyName);
-		}
-		List<String> colorList = new ArrayList<String>();
+
+		List<String> colorList = new ArrayList();
 		colorList.add("Red");
 		colorList.add("Green");
 		colorList.add("Black");
 		colorList.add("Violet");
 		colorList.add("Others");
 		// list type changed
-		ArrayAdapter<String> adp1 = new ArrayAdapter<String>(
-				getApplicationContext(), android.R.layout.simple_list_item_1,
+		ArrayAdapter<String> adp1 = new ArrayAdapter(
+				this, android.R.layout.simple_list_item_1,
 				colorList);
 		adp1.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
 		colors.setAdapter(adp1);
 
 		type = (Spinner) findViewById(R.id.type);
-		List<String> typeList = new ArrayList<String>();
+
+		List<String> typeList = new ArrayList();
 		typeList.add("Gents");
 		typeList.add("Ladies");
 		typeList.add("Kids");
@@ -105,6 +107,16 @@ public class AddItem extends Activity implements OnClickListener {
 		adp2.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
 		type.setAdapter(adp2);
 
+        if(comingfrom.equals("typecomp")) {
+             companyName_ = extras.getString("compname");
+            type_ = extras.getString("type");
+            type.setVisibility(View.GONE);
+            compname.setVisibility(View.GONE);
+        }
+        if(comingfrom.equals("type")) {
+            type_ = extras.getString("type");
+            type.setVisibility(View.GONE);
+        }
 		addButton.setOnClickListener(this);
 		image.setOnClickListener(new OnClickListener() {
 			
@@ -130,6 +142,7 @@ public class AddItem extends Activity implements OnClickListener {
  
             Cursor cursor = getContentResolver().query(selectedImage,
                     filePathColumn, null, null, null);
+            if(cursor!=null)
             cursor.moveToFirst();
  
             int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
@@ -146,15 +159,25 @@ public class AddItem extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View arg0) {
 
-		inputcompName = compname.getText().toString();
-		inputmodelName = modelname.getText().toString();
+        if(comingfrom.equals("type")||comingfrom.equals("typecomp")) {
+            inputType = type_;
+            if (comingfrom.equals("typecomp"))
+                inputcompName = companyName_;
+            else
+                inputcompName = compname.getText().toString();
+        }
+        else {
+            inputcompName = compname.getText().toString();
+            inputType = type.getSelectedItem().toString();
+        }
+
+        inputmodelName = modelname.getText().toString();
 
 		//inputImg = image;
 		inputDesc = desc.getText().toString();
 		inputColor = colors.getSelectedItem().toString();
 		inputSize = size.getText().toString();
 		inputQuant = quantity.getText().toString();
-		inputType = type.getSelectedItem().toString();
 		inputPrice=price.getText().toString();
 		addButton.setClickable(false);
 		cycle = new Cycle();
@@ -243,7 +266,7 @@ public class AddItem extends Activity implements OnClickListener {
 		compname.setText("");
 		modelname.setText("");
 
-		image.setImageAlpha(R.drawable.abc_btn_default_mtrl_shape);;
+		image.setImageAlpha(R.drawable.abc_btn_default_mtrl_shape);
 		desc.setText("");
 		size.setText("");
 		quantity.setText("");

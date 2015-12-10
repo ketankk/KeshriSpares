@@ -13,13 +13,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ShowAllCycles extends Activity {
+public class ModelsDisplay extends Activity {
 	private TextView compName;
 	private FloatingActionButton fabView;
 
@@ -29,7 +28,7 @@ public class ShowAllCycles extends Activity {
 		setContentView(R.layout.cycles_models);
 		
 		Bundle extras=getIntent().getExtras();
-		String type=extras.getString("type");
+		final String type=extras.getString("type");
 		final String companyName=extras.getString("compname");
 		CyclesItemDBHandler dbHandler = new CyclesItemDBHandler(this);
 
@@ -44,13 +43,15 @@ public class ShowAllCycles extends Activity {
 		ListView lview = (ListView)findViewById(R.id.models_list);
 
 		lview.setAdapter(adp);
-final CoordinatorLayout coordinatorLayout=(CoordinatorLayout) findViewById(R.id.coordinatorlayout);
+//final CoordinatorLayout coordinatorLayout=(CoordinatorLayout) findViewById(R.id.coordinatorlayout);
 
 		fabView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent=new Intent(ShowAllCycles.this,AddItem.class);
+				Intent intent=new Intent(ModelsDisplay.this,AddItem.class);
+                intent.putExtra("ComingFrom","typecomp");
                 intent.putExtra("compname",companyName);
+                intent.putExtra("type",type);
 				startActivity(intent);
 
 			}

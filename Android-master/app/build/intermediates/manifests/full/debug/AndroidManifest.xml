@@ -23,7 +23,8 @@
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
     <application
-        android:name="kk.play.keshrispares.controller.ApplicationController"
+        android:name="com.android.tools.fd.runtime.BootstrapApplication"
+        name="kk.play.keshrispares.controller.ApplicationController"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -62,13 +63,10 @@
             android:name="kk.play.keshrispares.activities.DailyReport"
             android:label="@string/title_activity_report" />
         <activity
-            android:name="kk.play.keshrispares.activities.ShowAllCycles"
-            android:label="@string/title_activity_show_all" />
+            android:name="kk.play.keshrispares.activities.ModelsDisplay"
+            android:label="@string/title_activity_show_all_models" />
 
-        <receiver
-            android:name="kk.play.keshrispares.utils.BroadCastReceiver"
-            android:enabled="true"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+        <receiver android:name="kk.play.keshrispares.utils.BroadCastReceiver" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
@@ -78,7 +76,7 @@
 
         <service android:name="kk.play.keshrispares.utils.StockManagementService" />
 
-        <activity android:name="kk.play.keshrispares.activities.CycleDisplayActivity" />
+        <activity android:name="kk.play.keshrispares.activities.DisplayCycles" />
     </application>
 
 </manifest>
