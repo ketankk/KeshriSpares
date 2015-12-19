@@ -23,8 +23,7 @@
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
     <application
-        android:name="com.android.tools.fd.runtime.BootstrapApplication"
-        name="kk.play.keshrispares.controller.ApplicationController"
+        android:name="kk.play.keshrispares.controller.ApplicationController"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -40,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="kk.play.keshrispares.activities.StockManagementActivity"
+            android:name="kk.play.keshrispares.activities.CompanyDisplay"
             android:label="@string/app_name" />
         <activity
             android:name="kk.play.keshrispares.utils.SearchResultsActivity"
@@ -76,7 +75,7 @@
 
         <service android:name="kk.play.keshrispares.utils.StockManagementService" />
 
-        <activity android:name="kk.play.keshrispares.activities.DisplayCycles" />
+        <activity android:name="kk.play.keshrispares.activities.DisplayCyclesSearch" />
     </application>
 
 </manifest>

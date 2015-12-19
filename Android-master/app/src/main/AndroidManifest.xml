@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.StockManagementActivity"
+            android:name=".activities.CompanyDisplay"
             android:label="@string/app_name" />
         <activity
             android:name=".utils.SearchResultsActivity"
@@ -77,7 +77,7 @@
 
         <service android:name=".utils.StockManagementService" />
 
-        <activity android:name=".activities.DisplayCycles"></activity>
+        <activity android:name=".activities.DisplayCyclesSearch"></activity>
     </application>
 
 </manifest>

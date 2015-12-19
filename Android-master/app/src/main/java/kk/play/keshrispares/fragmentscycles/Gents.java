@@ -45,8 +45,7 @@ List<String> companies =gentsHandler.getListOfCompaniesBytype(type);
 		CompanyListController controller=new CompanyListController();
 		controller.createView(companies, rootView,getActivity(),type);
 
-		//controller.createView(cycleList, rootView,getActivity());
-		
+
 		
 		return rootView;
 	}

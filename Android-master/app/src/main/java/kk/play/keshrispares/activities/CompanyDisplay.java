@@ -16,7 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.SearchView;
 
-public class StockManagementActivity extends AppCompatActivity {
+public class CompanyDisplay extends AppCompatActivity {
 
 	FragmentsController cycleAdapter;
 	ViewPager mViewPager;

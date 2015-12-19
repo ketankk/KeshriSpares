@@ -116,12 +116,12 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:39:17-77
 	android:name
 		ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:39:27-74
-activity#kk.play.keshrispares.activities.StockManagementActivity
+activity#kk.play.keshrispares.activities.CompanyDisplay
 ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:42:9-44:48
 	android:label
 		ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:44:13-45
 	android:name
-		ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:43:13-63
+		ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:43:13-54
 activity#kk.play.keshrispares.utils.SearchResultsActivity
 ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:45:9-55:20
 	android:label
@@ -186,7 +186,7 @@ service#kk.play.keshrispares.utils.StockManagementService
 ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:78:9-65
 	android:name
 		ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:78:18-62
-activity#kk.play.keshrispares.activities.DisplayCycles
-ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:80:9-71
+activity#kk.play.keshrispares.activities.DisplayCyclesSearch
+ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:80:9-77
 	android:name
-		ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:80:19-59
+		ADDED from /home/sultan_mirza/StudioProjects/Android-master/app/src/main/AndroidManifest.xml:80:19-65

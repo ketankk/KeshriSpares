@@ -28,7 +28,7 @@ public class PopupHandler {
     private TextView popupHeader;
     private TextView datePicker;
     private Activity activity;
-private EditText newQuantity;
+    private EditText newQuantity;
     CoordinatorLayout coordinatorLayout;
     public PopupHandler() {
     }

@@ -94,7 +94,16 @@ db.execSQL(CREATE_COMPANY_TABLE);
         Log.d("Onupgrade", "DB");
         onCreate(db);
     }
+    public List<String> getAllCompanies(){
 
+        List<String> comps=new ArrayList<>();
+        db=this.getReadableDatabase();
+        Cursor cursor=db.query(COMP_TABLE_NAME,new String[]{COMP_NAME},null,null,null,null,null);
+        while(cursor.moveToNext())
+            comps.add(cursor.getString(0));
+        db.close();
+        return comps;
+    }
     public String getCompByCompId(String id){
         String compName="";
         db=this.getReadableDatabase();

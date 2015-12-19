@@ -25,7 +25,7 @@
         android:textStyle="bold"
 
         />
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/models_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
         android:dividerHeight="5dp"
         android:layout_below="@id/compname1"
         android:listSelector="@drawable/list_selector">
-    </ListView>
+    </android.support.v7.widget.RecyclerView>
 </RelativeLayout>
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

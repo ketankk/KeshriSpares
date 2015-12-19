@@ -9,18 +9,21 @@ import kk.play.keshrispares.adapters.CompanyCustomListAdapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ListView;
 
 public class CompanyListController {
 	private FloatingActionButton fabView;
+	private RecyclerView.LayoutManager layoutManager;
 
 	public View createView(List<String> companies, View rootView, final Activity activity, String type) {
 
 		
 		CompanyCustomListAdapter adp = new CompanyCustomListAdapter(activity, companies,type);
 
-		ListView lview = (ListView) rootView.findViewById(R.id.companylist);
+		RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.companylist);
 	fabView= (FloatingActionButton) rootView.findViewById(R.id.fabtype);
  final String type_=type;
 		fabView.setOnClickListener(new View.OnClickListener() {
@@ -34,10 +37,11 @@ public class CompanyListController {
 			}
 		});
 
+layoutManager=new LinearLayoutManager(activity);
+		recyclerView.setLayoutManager(layoutManager);
+		recyclerView.setAdapter(adp);
 
-		lview.setAdapter(adp);
-
-		lview.setTextFilterEnabled(true);
+		//lview.setTextFilterEnabled(true);
 		return rootView;
 	
 }

@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager.LayoutParams;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,69 +34,54 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
-public class ModelCustomListAdapter extends BaseAdapter {
+public class ModelCustomListAdapter extends RecyclerView.Adapter<ModelCustomListAdapter.ViewHolder> {
 
     private Activity activity;
     private List<Cycle> cycles;
     private Cycle cycle;
-    private TextView quantity;
-    private TextView updateTime;
-    private TextView lastUpdatedOn;
-    private TextView name;
-    private TextView description;
 
-    private static LayoutInflater inflater = null;
     boolean viewGroupIsVisible = true;
-    View vi1;
     private EditText newQuantity;
-
+private LayoutInflater inflater;
     public ModelCustomListAdapter(Activity activity, List<Cycle> cycles) {
         this.activity = activity;
         this.cycles = cycles;
-        inflater = (LayoutInflater) activity
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater=(LayoutInflater.from(activity));
+
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View v=LayoutInflater.from(parent.getContext()).inflate(R.layout.list_row,parent,false);
+            ViewHolder vh=new ViewHolder(v);
+            return  vh;
 
-        View vi = convertView;
-        if (vi == null) {
-            vi = inflater.inflate(R.layout.list_row, null);
-        }
-        vi1 = vi;
+    }
 
-        lastUpdatedOn = (TextView) vi.findViewById(R.id.lastupdated); // last
-        // updated
-        // on
-        updateTime = (TextView) vi.findViewById(R.id.updatedTime); // last
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
-        name = (TextView) vi.findViewById(R.id.modelname); // cycle name
-        quantity = (TextView) vi.findViewById(R.id.quant); // quantity
-        ImageView cycleImage = (ImageView) vi.findViewById(R.id.cycle_image); // thumb
 
-        description = (TextView) vi.findViewById(R.id.description); // cycle
-        // name
         cycle = cycles.get(position);// Get cycle from list of cycles using
 
         final long cycle_id = cycle.getId();// item Id from itemTable
         final String compName = cycle.getCompName();
-        name.setText(cycle.getModelName());
-        lastUpdatedOn.setText(cycle.getLastUpdatedDate());
-        updateTime.setText(cycle.getLastUpdatedTime());
-        quantity.setText(cycle.getQuantity() + "");
+        holder.name.setText(cycle.getModelName());
+        holder.lastUpdatedOn.setText(cycle.getLastUpdatedDate());
+        holder.updateTime.setText(cycle.getLastUpdatedTime());
+        holder.quantity.setText(cycle.getQuantity() + "");
 
 
 //Picasso Image Loading
 
-        Picasso.with(activity).load(new File(cycle.getImage())).resize(100, 100).into(cycleImage);
+        Picasso.with(activity).load(new File(cycle.getImage())).resize(100, 100).into(holder.cycleImage);
 
-        description.setText(cycle.getDescription());
-
+        holder. description.setText(cycle.getDescription());
+View vi1=holder.vi;
         PopupHandler popupHandler=new PopupHandler(vi1,activity,inflater);
         popupHandler.popup(cycle);
 
-        vi1.setOnLongClickListener(new OnLongClickListener() {
+       holder.vi.setOnLongClickListener(new OnLongClickListener() {
 
             @Override
             public boolean onLongClick(View arg0) {
@@ -111,8 +97,7 @@ public class ModelCustomListAdapter extends BaseAdapter {
                 return true;
             }
         });
-        setBackgroundColor(vi,cycle.getColor());
-        return vi;
+        setBackgroundColor(holder.vi,cycle.getColor());
     }
 
     public void setBackgroundColor(View vi,String color){
@@ -141,13 +126,8 @@ public class ModelCustomListAdapter extends BaseAdapter {
 
 
     @Override
-    public int getCount() {
+    public int getItemCount() {
         return cycles.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return position;
     }
 
     @Override
@@ -155,6 +135,26 @@ public class ModelCustomListAdapter extends BaseAdapter {
         return position;
     }
 
+static class ViewHolder extends RecyclerView.ViewHolder{
+    private TextView quantity;
+    private TextView updateTime;
+    private TextView lastUpdatedOn;
+    private TextView name;
+    private TextView description;
+   private ImageView cycleImage;
+private  View vi;
+    public ViewHolder(View vi) {
+        super(vi);
+this.vi=vi;
+        lastUpdatedOn = (TextView) vi.findViewById(R.id.lastupdated);
+        updateTime = (TextView) vi.findViewById(R.id.updatedTime);
+        name = (TextView) vi.findViewById(R.id.modelname);
+        quantity = (TextView) vi.findViewById(R.id.quant);
+        cycleImage = (ImageView) vi.findViewById(R.id.cycle_image);
+        description = (TextView) vi.findViewById(R.id.description);
 
+
+    }
+}
 
 }

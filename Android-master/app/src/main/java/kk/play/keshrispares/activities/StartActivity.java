@@ -31,7 +31,7 @@ ListView mDrawerList;
 
 
 		ImageButton btn1 = (ImageButton) findViewById(R.id.btn1);
-		intent1 = new Intent(this, StockManagementActivity.class);
+		intent1 = new Intent(this, CompanyDisplay.class);
 
 		btn1.setOnClickListener(new OnClickListener() {
 
@@ -59,7 +59,7 @@ ListView mDrawerList;
 		});
 
 		ImageButton btn3 = (ImageButton) findViewById(R.id.btn3);
-		intent3 = new Intent(this, DisplayCycles.class);
+		intent3 = new Intent(this, DisplayCyclesSearch.class);
 
 		btn3.setOnClickListener(new OnClickListener() {
 

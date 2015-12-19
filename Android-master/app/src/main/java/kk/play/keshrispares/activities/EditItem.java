@@ -7,7 +7,6 @@ import java.util.List;
 import kk.play.keshrispares.R;
 import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.entity.Cycle;
-import kk.play.keshrispares.utils.LoadImage;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -262,7 +261,7 @@ priceEdit.setText(cycle.getPrice());
 	}
 
 	void backToMain() {
-		Intent intent = new Intent(getApplicationContext(), StockManagementActivity.class);
+		Intent intent = new Intent(getApplicationContext(), CompanyDisplay.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
 		startActivity(intent);

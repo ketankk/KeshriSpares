@@ -23,7 +23,7 @@ public class ModelListController {
 
 		ListView lview = (ListView) rootView.findViewById(R.id.companylist);
 
-		lview.setAdapter(adp);
+		//lview.setAdapter(adp);
 
 		lview.setTextFilterEnabled(true);
 		return rootView;
