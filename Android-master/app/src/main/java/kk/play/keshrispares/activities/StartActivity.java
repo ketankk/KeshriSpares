@@ -1,10 +1,15 @@
 package kk.play.keshrispares.activities;
 
 import kk.play.keshrispares.R;
+import kk.play.keshrispares.adapters.NavDrawerAdapter;
+import kk.play.keshrispares.entity.NavigationDrawerItem;
+import kk.play.keshrispares.entity.NavigationDrawerItem;
+
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,13 +20,18 @@ import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StartActivity extends Activity {
 	Notification notification;
 	NotificationManager notificationManager;
 	Intent intent1,intent3,intent2;
 	ActionBarDrawerToggle mDrawerToggle;
-	String mTitle;
-DrawerLayout mDrawerLayout;
+
+	private DrawerLayout mDrawerLayout;
+	private CharSequence mDrawerTitle;
+	private CharSequence mTitle;
 //private String[] mPlanetTitles;
 ListView mDrawerList;
 	@Override
@@ -71,6 +81,8 @@ ListView mDrawerList;
 
 			}
 		});
+
+
 	}
 
 	void GenerateNotification() {
@@ -119,5 +131,30 @@ ListView mDrawerList;
 	 * if (resultCode == RESULT_CANCELED) { String result =
 	 * data.getStringExtra("result"); Log.d("TAGCancel", result); } } }
 	 */
+void populateDrawer(){
+TypedArray navMenuIcons;
+	List<NavigationDrawerItem> navigationDrawerItems;
+	ListView mDrawerList= (ListView) findViewById(R.id.left_drawer);
 
+	mDrawerTitle=mTitle=getTitle();
+
+navigationDrawerItems =new ArrayList<NavigationDrawerItem>();
+
+	NavigationDrawerItem navigationDrawerItem=new NavigationDrawerItem();
+	navigationDrawerItem.setIcon("");
+	navigationDrawerItem.setTitle("JJ");
+
+	navigationDrawerItems.add(navigationDrawerItem);
+	navigationDrawerItems.add(navigationDrawerItem);
+
+	mDrawerLayout=(DrawerLayout) findViewById(R.id.drawerlayout);
+
+	NavDrawerAdapter adapter=new NavDrawerAdapter(getApplicationContext(),navigationDrawerItems);
+
+
+mDrawerList.setAdapter(adapter);
+mDrawerToggle=new ActionBarDrawerToggle(this,mDrawerLayout,R.string.app_name,R.string.app_name);
+mDrawerLayout.setDrawerListener(mDrawerToggle);
+
+}
 }

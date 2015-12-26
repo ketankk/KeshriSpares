@@ -12,7 +12,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class FragmentsController extends FragmentPagerAdapter {
 	private final static int noTabs = 4;
 
-	public FragmentsController(FragmentManager fm) {
+	public 	FragmentsController(FragmentManager fm) {
 		super(fm);
 	}
 

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -55,7 +56,8 @@ public class PopupHandler {
                 popupWindow.setFocusable(true);
                 popupHeader = (TextView) popupQuantView
                         .findViewById(R.id.popupheader);
-                popupWindow.showAsDropDown(view, 150, 300);
+               // popupWindow.showAsDropDown(view, 150, 300);
+                popupWindow.showAtLocation(popupQuantView, Gravity.CENTER,0,0);
                 newQuantity = (EditText) popupQuantView
                         .findViewById(R.id.quantityUpdate);
                 TextView btnDismiss = (TextView) popupQuantView

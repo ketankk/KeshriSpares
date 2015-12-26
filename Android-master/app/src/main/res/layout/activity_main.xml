@@ -12,6 +12,7 @@
         android:layout_gravity="top"
         android:background="#E61616"
         android:textColor="#FFF"
+        android:layout_weight="1"
         android:paddingBottom="4dp" 
         />
     

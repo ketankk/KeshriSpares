@@ -18,16 +18,18 @@ import android.widget.SearchView;
 
 public class CompanyDisplay extends AppCompatActivity {
 
-	FragmentsController cycleAdapter;
-	ViewPager mViewPager;
+	private FragmentsController cycleAdapter;
+	private ViewPager mViewPager;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+
 		cycleAdapter = new FragmentsController(getSupportFragmentManager());
 		mViewPager = (ViewPager) findViewById(R.id.pager);
+
 		mViewPager.setAdapter(cycleAdapter);
 
 	}
