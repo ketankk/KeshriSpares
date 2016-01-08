@@ -6,6 +6,7 @@ import kk.play.keshrispares.entity.NavigationDrawerItem;
 import kk.play.keshrispares.entity.NavigationDrawerItem;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Intent;
@@ -13,10 +14,12 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.transition.Explode;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -32,13 +35,15 @@ public class StartActivity extends Activity {
 	private DrawerLayout mDrawerLayout;
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
+	private Activity activity;
 //private String[] mPlanetTitles;
 ListView mDrawerList;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
 		setContentView(R.layout.activity_start);
-
+activity=this;
 
 		ImageButton btn1 = (ImageButton) findViewById(R.id.btn1);
 		intent1 = new Intent(this, CompanyDisplay.class);
@@ -48,8 +53,9 @@ ListView mDrawerList;
 			@Override
 			public void onClick(View arg0) {
 				//GenerateNotification();
+				getWindow().setExitTransition(new Explode());
 
-						startActivity(intent1);
+						startActivity(intent1,ActivityOptions.makeSceneTransitionAnimation(activity).toBundle());
 
 			}
 		});
@@ -62,8 +68,8 @@ ListView mDrawerList;
 			@Override
 			public void onClick(View arg0) {
 				//GenerateNotification();
-
-						startActivity(intent2);
+getWindow().setExitTransition(new Explode());
+						startActivity(intent2, ActivityOptions.makeSceneTransitionAnimation(activity).toBundle());
 
 			}
 		});
@@ -76,8 +82,9 @@ ListView mDrawerList;
 			@Override
 			public void onClick(View arg0) {
 				//GenerateNotification();
+				getWindow().setExitTransition(new Explode());
 
-				startActivity(intent3);
+				startActivity(intent3,ActivityOptions.makeSceneTransitionAnimation(activity).toBundle());
 
 			}
 		});

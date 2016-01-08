@@ -144,13 +144,13 @@
                     "endOffset": 607
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-sw600dp/values-sw600dp.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-sw600dp/values-sw600dp.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 278,
+                        "startOffset": 285,
                         "endColumn": 69,
-                        "endOffset": 343
+                        "endOffset": 350
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 678
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-sw600dp/values-sw600dp.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-sw600dp/values-sw600dp.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 348,
+                        "startOffset": 355,
                         "endColumn": 70,
-                        "endOffset": 414
+                        "endOffset": 421
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 750
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-sw600dp/values-sw600dp.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-sw600dp/values-sw600dp.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 419,
+                        "startOffset": 426,
                         "endColumn": 71,
-                        "endOffset": 486
+                        "endOffset": 493
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 808
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-sw600dp/values-sw600dp.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-sw600dp/values-sw600dp.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 491,
+                        "startOffset": 498,
                         "endColumn": 57,
-                        "endOffset": 544
+                        "endOffset": 551
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 866
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-sw600dp/values-sw600dp.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-sw600dp/values-sw600dp.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 549,
+                        "startOffset": 556,
                         "endColumn": 57,
-                        "endOffset": 602
+                        "endOffset": 609
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 972
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-sw600dp/values-sw600dp.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-sw600dp/values-sw600dp.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 607,
+                        "startOffset": 614,
                         "endColumn": 105,
-                        "endOffset": 708
+                        "endOffset": 715
                     }
                 }
             },
@@ -254,17 +254,17 @@
                     "startLine": 15,
                     "startColumn": 4,
                     "startOffset": 977,
-                    "endColumn": 52,
-                    "endOffset": 1025
+                    "endColumn": 63,
+                    "endOffset": 1036
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-sw600dp/values-sw600dp.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-sw600dp/values-sw600dp.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 713,
-                        "endColumn": 52,
-                        "endOffset": 761
+                        "startOffset": 720,
+                        "endColumn": 63,
+                        "endOffset": 779
                     }
                 }
             },
@@ -272,9 +272,9 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1030,
+                    "startOffset": 1041,
                     "endColumn": 54,
-                    "endOffset": 1080
+                    "endOffset": 1091
                 },
                 "from": {
                     "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml",
@@ -291,18 +291,18 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1085,
+                    "startOffset": 1096,
                     "endColumn": 62,
-                    "endOffset": 1143
+                    "endOffset": 1154
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-sw600dp/values-sw600dp.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-sw600dp/values-sw600dp.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 989,
+                        "startOffset": 1014,
                         "endColumn": 62,
-                        "endOffset": 1047
+                        "endOffset": 1072
                     }
                 }
             },
@@ -310,20 +310,20 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1148,
+                    "startOffset": 1159,
                     "endLine": 21,
                     "endColumn": 12,
-                    "endOffset": 1325
+                    "endOffset": 1336
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values-sw600dp/values-sw600dp.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-sw600dp/values-sw600dp.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1275,
+                        "startOffset": 1307,
                         "endLine": 19,
                         "endColumn": 12,
-                        "endOffset": 1452
+                        "endOffset": 1484
                     }
                 }
             }

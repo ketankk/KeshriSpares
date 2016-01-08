@@ -32,6 +32,7 @@ public class CompanyDisplay extends AppCompatActivity {
 
 		mViewPager.setAdapter(cycleAdapter);
 
+
 	}
 
 	@Override

@@ -1,8 +1,10 @@
 package kk.play.keshrispares.database;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import kk.play.keshrispares.entity.Cycle;
@@ -261,19 +263,35 @@ db.execSQL(CREATE_COMPANY_TABLE);
         db.close();
         return salesid;
     }
-
+//Change calendar to joda time
     public boolean updateQuantity(long id, int quantity, String date,boolean flag) {
+        String dateString2="";
         // flag true(1) for sold..false(0) for Adding more cycles
         db = this.getWritableDatabase();
         String time=new SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime());
+        try {
+            Date date2 = new SimpleDateFormat("dd-MM-yyyy").parse(date);
+            dateString2= new SimpleDateFormat("yyyy-MM-dd").format(date2);
 
+        }catch (ParseException e){
+
+        }
+
+        String datetime=dateString2+" "+time;//new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
+Log.d("DATETIME",datetime);
         ContentValues values = new ContentValues();
         values.put(itemId, id);
         values.put(QUANTITY, quantity);
+        values.put(DATETIME,datetime);
         values.put(TIME,time);
         values.put(DATE,date);
         values.put(FLAG, flag);
+//db.execSQL("DELETE FROM "+SALES_TABLE_NAME);
+       /* while (cur.moveToNext()){
+            Log.d("Date",cur.getString(0)+" itemid="+cur.getString(1)+"qq"+cur.getString(2)+" time"+cur.getString(3));
+            Log.d("next",cur.getString(4)+" itemid="+cur.getString(5)+"qq"+cur.getString(6));
 
+        }*/
 
         if (db.insert(SALES_TABLE_NAME, null, values) > 0)// primary key of
         // inserted
@@ -374,7 +392,7 @@ db.execSQL(CREATE_COMPANY_TABLE);
     public List<String> getAllDistinctDates(){
         List<String> dates=new ArrayList<String>();
         db=this.getReadableDatabase();
-        String query="SELECT distinct "+ DATE+" from "+SALES_TABLE_NAME;
+        String query="SELECT distinct "+ DATE+" from "+SALES_TABLE_NAME +" ORDER BY " + DATETIME + " DESC";
         Cursor c=db.rawQuery(query, null);
 
         while(c.moveToNext()){

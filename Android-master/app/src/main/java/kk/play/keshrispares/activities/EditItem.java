@@ -32,34 +32,34 @@ import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 
 public class EditItem extends Activity implements OnClickListener{
-	EditText compNameEdit;
-	EditText modelNameEdit;
+	private EditText compNameEdit;
+	private EditText modelNameEdit;
 
-	ImageView imageEdit;
-	EditText descEdit;
-	EditText sizeEdit;
-	EditText priceEdit;
-	TextView quantityEdit;
-	Spinner typeEdit;
-	Spinner colorEdit;
+	private ImageView imageEdit;
+	private EditText descEdit;
+	private EditText sizeEdit;
+	private EditText priceEdit;
+	private TextView quantityEdit;
+	private Spinner typeEdit;
+	private Spinner colorEdit;
 	
-	Button editButton;
-Button deleteButton;
+	private Button editButton;
+	private Button deleteButton;
 
-	String inputCompName;
-	String inputModelName;
-	String inputImgPath;
-	String inputDesc;
-	String inputColor;
-	String inputSize;
-	String inputQuant;
-	String inputType;
-	String inputPrice;
-	Context context;
-	boolean isUpdated;
-	boolean isDeleted;
+	private String inputCompName;
+	private String inputModelName;
+	private String inputImgPath;
+	private String inputDesc;
+	private String inputColor;
+	private String inputSize;
+	private String inputQuant;
+	private String inputType;
+	private String inputPrice;
+	private Context context;
+	private boolean isUpdated;
+	private boolean isDeleted;
 
-	long cycleId;
+	private long cycleId;
 	private static int RESULT_LOAD_IMAGE = 1;
 
 

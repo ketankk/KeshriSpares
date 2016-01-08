@@ -11,6 +11,7 @@
         android:divider="#b5b5b5"
         android:dividerHeight="5dp"
         android:listSelector="@drawable/list_selector"
+         android:layout_marginTop="10dp"
         
         > 
     </ListView>

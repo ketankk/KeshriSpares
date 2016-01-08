@@ -108,10 +108,10 @@ createChart(labels,entries);
 
         for(Report report:reports){
           LocalDate date= CalendarUtil.getDateFromString(report.getDate());
-            Log.d(""+date.getWeekyear(),date.getWeekOfWeekyear()+"");
-            Log.d(date+"",monday+"");
+//            Log.d(""+date.getWeekyear(),date.getWeekOfWeekyear()+"");
+            Log.d(date+"dd",monday+"mon");
             if(date.isAfter(monday)||date.isEqual(monday)){
-                Log.d(date+"",monday+"");
+                Log.d(date+"dy",monday+"mn"+Days.daysBetween(monday,date).getDays());
 
                 entries.add(new BarEntry(report.getQuant(), Days.daysBetween(monday,date).getDays()));
             }
@@ -127,7 +127,10 @@ createChart(labels,entries);
 
     }
 
+/*
 
+Year factor not added....
+ */
     public void displayMonthlyWise(View view){
         List<BarEntry> entries=new ArrayList<>();
         List<String> labels=new ArrayList<>();

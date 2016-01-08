@@ -2,7 +2,6 @@ package kk.play.keshrispares.utils;
 
 import android.util.Log;
 import android.view.View;
-import android.widget.DatePicker;
 import android.widget.TextView;
 
 import org.joda.time.DateTime;
@@ -32,7 +31,7 @@ public class CalendarUtil {
         month=calendar.get(Calendar.MONTH);
         date=calendar.get(Calendar.DATE);
         StringBuilder str=new StringBuilder();
-        return date+"-"+(month+1)+"-"+year;
+        return "0"+date+"-0"+(month+1)+"-"+year;
     }
     public static LocalDate getCurrentWeekMondayDate(){
         LocalDate today=LocalDate.now();

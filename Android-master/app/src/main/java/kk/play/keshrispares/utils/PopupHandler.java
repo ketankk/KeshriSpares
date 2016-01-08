@@ -1,14 +1,17 @@
 package kk.play.keshrispares.utils;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -30,7 +33,11 @@ public class PopupHandler {
     private TextView datePicker;
     private Activity activity;
     private EditText newQuantity;
-    CoordinatorLayout coordinatorLayout;
+    private CoordinatorLayout coordinatorLayout;
+    private String date;
+    private String selYear;
+    private String selMonth;
+    private String selDate;
     public PopupHandler() {
     }
     public PopupHandler(View view, Context context, LayoutInflater inflater) {
@@ -45,7 +52,7 @@ public class PopupHandler {
         final String compName=cycle.getCompName();
         final long cycle_id=cycle.getId();
 
-       final String date=CalendarUtil.getCurrentDate();
+     date=CalendarUtil.getCurrentDate();
         view.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -62,10 +69,47 @@ public class PopupHandler {
                         .findViewById(R.id.quantityUpdate);
                 TextView btnDismiss = (TextView) popupQuantView
                         .findViewById(R.id.popupDismiss);
-                popupHeader.setText(compName);
+                popupHeader.setText(compName+" "+cycle.getModelName());
 
                 datePicker = (TextView) popupQuantView.findViewById(R.id.datepicker);
                 CalendarUtil.setCurrentDate(datePicker);
+
+
+                final DatePickerDialog.OnDateSetListener onDateSetListener =new DatePickerDialog.OnDateSetListener(){
+
+                    @Override
+                    public void onDateSet(DatePicker view, int year1, int monthOfYear, int dayOfMonth) {
+
+                        selYear=year1+"";
+                        selMonth=monthOfYear+1+"";
+                        if(monthOfYear<10)
+                            selMonth="0"+selMonth;
+                        selDate=""+dayOfMonth;
+
+                        if(dayOfMonth<10)
+                        selDate="0"+selDate;
+                        date=selDate+"-"+selMonth+"-"+selYear;
+                        datePicker.setText(date);
+
+                    }
+                };
+String CURRENT_DATE[]=CalendarUtil.getCurrentDate().split("-");
+               final int currDate=Integer.parseInt(CURRENT_DATE[0]);
+                final int currMon=Integer.parseInt(CURRENT_DATE[1])-1;
+                final int currYear=Integer.parseInt(CURRENT_DATE[2]);
+                Log.d(currDate+currMon+currYear+"","efe");
+                datePicker.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        DatePickerDialog datePickerDialog=new DatePickerDialog(context,onDateSetListener,currYear,currMon,currDate);
+                        datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis() - 1000);
+                        datePickerDialog.show();
+
+                    }
+                });
+
+
+
 
                 btnDismiss.setOnClickListener(new Button.OnClickListener() {
 

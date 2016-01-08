@@ -5,6 +5,7 @@
     android:background="@drawable/list_selector"
     android:orientation="horizontal"
     android:padding="5dip"
+    android:layout_marginBottom="5dp"
     android:paddingBottom="5dip" >
 
     <!-- ListRow Left side Thumbnail image -->
@@ -47,7 +48,8 @@
             android:textColor="#e609cc"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:typeface="sans" />
+            android:typeface="sans"
+            android:elevation="5dp"/>
 
         <!-- Cycle Description -->
 
