@@ -6,7 +6,6 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
-import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.database.DailyReportDBHandler;
 import kk.play.keshrispares.entity.Report;
 

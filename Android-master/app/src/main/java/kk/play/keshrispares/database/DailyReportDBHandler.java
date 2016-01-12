@@ -5,7 +5,6 @@ import java.util.List;
 
 import kk.play.keshrispares.entity.Report;
 import android.app.Activity;
-import android.util.Log;
 
 public class DailyReportDBHandler {
 	

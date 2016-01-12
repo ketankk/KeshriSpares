@@ -5,7 +5,6 @@ import java.util.List;
 import kk.play.keshrispares.R;
 import kk.play.keshrispares.activities.ModelsDisplay;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 public class CompanyCustomListAdapter extends RecyclerView.Adapter<CompanyCustomListAdapter.ViewHolder> {

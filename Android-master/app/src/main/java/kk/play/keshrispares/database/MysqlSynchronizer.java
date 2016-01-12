@@ -25,8 +25,8 @@ public class MysqlSynchronizer {
 
 
 	public void getAllCyclesIdFromMysql() {
-		String url = "http://keshri.comxa.com/getfromdb.php";
-		//String url = "http://kuari.in/keshrispares/getfromdb.php";
+		 //String url = "http://keshri.comxa.com/getfromdb.php";
+		String url = "http://kuari.in/keshrispares/getfromdb.php";
 
 		VolleyServerUpdater updater = new VolleyServerUpdater(context);
 		updater.getIdFromServerDB(new VolleyCallBack() {
@@ -74,8 +74,8 @@ Log.d("mysql", jsonObject.getString("item_id"));
 
 	public void updateMySQL(List<Cycle> cycles) {
 		
-		//String url = "http://kuari.in/keshrispares/connection.php";
-		String url = "http://keshri.comxa.com/connection.php";
+		String url = "http://kuari.in/keshrispares/connection.php";
+		//String url = "http://keshri.comxa.com/connection.php";
 
 		VolleyServerUpdater updater = new VolleyServerUpdater(context);
 		for(Cycle cycle:cycles){

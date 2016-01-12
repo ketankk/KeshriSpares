@@ -3,7 +3,6 @@ package kk.play.keshrispares.activities;
 import kk.play.keshrispares.R;
 import kk.play.keshrispares.adapters.NavDrawerAdapter;
 import kk.play.keshrispares.entity.NavigationDrawerItem;
-import kk.play.keshrispares.entity.NavigationDrawerItem;
 
 import android.app.Activity;
 import android.app.ActivityOptions;

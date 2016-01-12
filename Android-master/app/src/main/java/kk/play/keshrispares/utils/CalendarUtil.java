@@ -26,12 +26,19 @@ public class CalendarUtil {
         d.setText( getCurrentDate() );
     }
     public static String getCurrentDate(){
+        String dateS="",monthS="";
         Calendar calendar=Calendar.getInstance();
         year=calendar.get(Calendar.YEAR);
-        month=calendar.get(Calendar.MONTH);
+        month=calendar.get(Calendar.MONTH)+1;
         date=calendar.get(Calendar.DATE);
         StringBuilder str=new StringBuilder();
-        return "0"+date+"-0"+(month+1)+"-"+year;
+        dateS=date+"";
+        monthS=month+"";
+        if(date<10)
+            dateS="0"+date;
+        if(month<10)
+            monthS="0"+month;
+        return dateS+"-"+monthS+"-"+year;
     }
     public static LocalDate getCurrentWeekMondayDate(){
         LocalDate today=LocalDate.now();

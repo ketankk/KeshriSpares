@@ -15,7 +15,6 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import kk.play.keshrispares.R;
 import kk.play.keshrispares.database.CyclesItemDBHandler;
@@ -33,6 +32,7 @@ public class PopupHandler {
     private TextView datePicker;
     private Activity activity;
     private EditText newQuantity;
+    private TextView quantView;
     private CoordinatorLayout coordinatorLayout;
     private String date;
     private String selYear;
@@ -40,11 +40,12 @@ public class PopupHandler {
     private String selDate;
     public PopupHandler() {
     }
-    public PopupHandler(View view, Context context, LayoutInflater inflater) {
+    public PopupHandler(View view, Context context, LayoutInflater inflater,TextView quantView) {
         this.view=view;
         this.context=context;
         this.inflater=inflater;
         activity=(Activity) context;
+        this.quantView=quantView;
 
     }
 
@@ -115,7 +116,7 @@ String CURRENT_DATE[]=CalendarUtil.getCurrentDate().split("-");
 
                     @Override
                     public void onClick(View v) {
-                        popupWindow.dismiss();
+                        dismissPopup(popupWindow);
                     }
                 });
 
@@ -126,7 +127,7 @@ String CURRENT_DATE[]=CalendarUtil.getCurrentDate().split("-");
                     @Override
                     public void onClick(View v) {
                         if (newQuantity.getText().toString().length() > 0) {
-                            popupWindow.dismiss();
+                            dismissPopup(popupWindow);
                             final int updatedQuantity = Integer
                                     .parseInt(newQuantity.getText().toString());
 
@@ -135,8 +136,11 @@ String CURRENT_DATE[]=CalendarUtil.getCurrentDate().split("-");
                                     activity);
                             boolean flag =itemHandler.updateQuantity(cycle_id,
                                     updatedQuantity,date, false);
-                            if(flag)
-                                showSnackbar(updatedQuantity+" "+cycle.getModelName()+" Added");
+                            if(flag) {
+                                showSnackbar(updatedQuantity + " " + cycle.getModelName() + " Added");
+                            quantView.setText(cycle.getQuantity()+updatedQuantity+"");
+
+                            }
 
                         }
                     }
@@ -148,8 +152,7 @@ String CURRENT_DATE[]=CalendarUtil.getCurrentDate().split("-");
                     @Override
                     public void onClick(View v) {
                         if (newQuantity.getText().toString().length() > 0) {
-
-                            popupWindow.dismiss();
+                            dismissPopup(popupWindow);
                             final int updatedQuantity = Integer
                                     .parseInt(newQuantity.getText().toString());
 
@@ -157,8 +160,11 @@ String CURRENT_DATE[]=CalendarUtil.getCurrentDate().split("-");
                                     activity);
                             boolean flag=itemHandler.updateQuantity(cycle_id,
                                     updatedQuantity,date, true);
-                            if(flag)
-                                showSnackbar(updatedQuantity+" "+cycle.getModelName()+" Sold");
+                            if(flag) {
+                                showSnackbar(updatedQuantity + " " + cycle.getModelName() + " Sold");
+                                quantView.setText(cycle.getQuantity()-updatedQuantity+"");
+
+                            }
                         }
                     }
                 });
@@ -175,5 +181,10 @@ String CURRENT_DATE[]=CalendarUtil.getCurrentDate().split("-");
                 .make(coordinatorLayout, msg, Snackbar.LENGTH_LONG);
 
         snackbar.show();
+    }
+    void dismissPopup(PopupWindow popupWindow){
+
+        popupWindow.dismiss();
+
     }
 }

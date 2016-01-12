@@ -4,31 +4,20 @@ import java.io.File;
 import java.util.List;
 
 import kk.play.keshrispares.R;
-import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.entity.Cycle;
 import kk.play.keshrispares.activities.EditItem;
-import kk.play.keshrispares.utils.CalendarUtil;
-import kk.play.keshrispares.utils.LoadImage;
 import kk.play.keshrispares.utils.PopupHandler;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.view.ViewPager.LayoutParams;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -78,7 +67,8 @@ private LayoutInflater inflater;
 
         holder. description.setText(cycle.getDescription());
 View vi1=holder.vi;
-        PopupHandler popupHandler=new PopupHandler(vi1,activity,inflater);
+
+        PopupHandler popupHandler=new PopupHandler(vi1,activity,inflater,holder.quantity);
         popupHandler.popup(cycle);
 
        holder.vi.setOnLongClickListener(new OnLongClickListener() {
