@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.entity.Cycle;
 

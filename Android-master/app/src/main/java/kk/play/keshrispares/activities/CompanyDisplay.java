@@ -1,6 +1,6 @@
 package kk.play.keshrispares.activities;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.controller.FragmentsController;
 
 import android.app.SearchManager;

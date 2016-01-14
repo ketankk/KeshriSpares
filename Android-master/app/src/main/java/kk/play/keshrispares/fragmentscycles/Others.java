@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.controller.CompanyListController;
 import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.entity.Cycle;

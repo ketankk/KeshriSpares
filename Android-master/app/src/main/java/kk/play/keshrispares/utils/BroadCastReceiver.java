@@ -1,6 +1,6 @@
 package kk.play.keshrispares.utils;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.activities.StartActivity;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -29,7 +29,7 @@ public class BroadCastReceiver extends WakefulBroadcastReceiver {
 	
 	void GenerateNotification(Context context) {
 
-		Intent myIntent = new Intent(context, StartActivity.class);
+		/*Intent myIntent = new Intent(context, StartActivity.class);
 		PendingIntent pendingIntent = PendingIntent.getActivity(
 				context, 0, myIntent, Intent.FLAG_ACTIVITY_NEW_TASK);
 		Notification notification = new Notification.Builder(context)
@@ -42,7 +42,7 @@ public class BroadCastReceiver extends WakefulBroadcastReceiver {
 
 				.build();
 		NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-		notificationManager.notify(1, notification);
+		notificationManager.notify(1, notification);*/
 	}
 
 }

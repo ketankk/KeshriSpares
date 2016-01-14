@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.entity.NavigationDrawerItem;
 
 /**

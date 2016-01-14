@@ -1,6 +1,6 @@
 package kk.play.keshrispares.activities;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.adapters.NavDrawerAdapter;
 import kk.play.keshrispares.entity.NavigationDrawerItem;
 

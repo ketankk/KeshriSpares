@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.adapters.ModelCustomListAdapter;
 import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.entity.Cycle;

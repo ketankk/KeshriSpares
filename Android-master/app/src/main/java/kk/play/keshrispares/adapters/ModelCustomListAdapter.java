@@ -3,7 +3,7 @@ package kk.play.keshrispares.adapters;
 import java.io.File;
 import java.util.List;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.entity.Cycle;
 import kk.play.keshrispares.activities.EditItem;
 import kk.play.keshrispares.utils.PopupHandler;

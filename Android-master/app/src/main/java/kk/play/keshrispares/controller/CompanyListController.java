@@ -2,7 +2,7 @@ package kk.play.keshrispares.controller;
 
 import java.util.List;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.activities.AddItem;
 import kk.play.keshrispares.adapters.CompanyCustomListAdapter;
 

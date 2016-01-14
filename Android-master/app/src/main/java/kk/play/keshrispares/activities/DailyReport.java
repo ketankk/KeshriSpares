@@ -3,7 +3,7 @@ package kk.play.keshrispares.activities;
 import java.util.ArrayList;
 import java.util.List;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.adapters.ReportAdapter;
 import kk.play.keshrispares.database.MysqlSynchronizer;
 import kk.play.keshrispares.entity.Report;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="kk.play.keshrispares"
-    android:versionCode="3"
-    android:versionName="1.2.0">
+    package="in.kuari.keshrispares"
+    android:versionCode="1"
+    android:versionName="1.0.0">
 
     <uses-sdk
         android:minSdkVersion="21"
@@ -26,14 +26,14 @@
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
 
     <application
-        android:name=".controller.ApplicationController"
+        android:name="kk.play.keshrispares.controller.ApplicationController"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         android:theme="@style/MyTheme">
         <activity
-            android:name=".activities.StartActivity"
+            android:name="kk.play.keshrispares.activities.StartActivity"
             android:label="@string/title_activity_start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,10 +42,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.CompanyDisplay"
+            android:name="kk.play.keshrispares.activities.CompanyDisplay"
             android:label="@string/app_name" />
         <activity
-            android:name=".utils.SearchResultsActivity"
+            android:name="kk.play.keshrispares.utils.SearchResultsActivity"
             android:label="@string/app_name">
             <meta-data
                 android:name="android.app.searchable"
@@ -56,20 +56,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.AddItem"
+            android:name="kk.play.keshrispares.activities.AddItem"
             android:label="@string/title_activity_add_item" />
         <activity
-            android:name=".activities.EditItem"
+            android:name="kk.play.keshrispares.activities.EditItem"
             android:label="@string/title_activity_edit_item" />
         <activity
-            android:name=".activities.DailyReport"
+            android:name="kk.play.keshrispares.activities.DailyReport"
             android:label="@string/title_activity_report" />
         <activity
-            android:name=".activities.ModelsDisplay"
+            android:name="kk.play.keshrispares.activities.ModelsDisplay"
             android:label="@string/title_activity_show_all_models" />
 
         <receiver
-            android:name=".utils.BroadCastReceiver"
+            android:name="kk.play.keshrispares.utils.BroadCastReceiver"
             > <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
@@ -77,9 +77,9 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".utils.StockManagementService" />
+        <service android:name="kk.play.keshrispares.utils.StockManagementService" />
 
-        <activity android:name=".activities.DisplayCyclesSearch"></activity>
+        <activity android:name="kk.play.keshrispares.activities.DisplayCyclesSearch"></activity>
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"

@@ -2,7 +2,7 @@ package kk.play.keshrispares.adapters;
 
 import java.util.List;
 
-import kk.play.keshrispares.R;
+import in.kuari.keshrispares.R;
 import kk.play.keshrispares.activities.ModelsDisplay;
 import android.app.Activity;
 import android.content.Intent;

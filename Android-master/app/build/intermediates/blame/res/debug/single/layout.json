@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
-        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
-    },
-    {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
@@ -64,12 +64,12 @@
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
-        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
-    },
-    {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
         "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
