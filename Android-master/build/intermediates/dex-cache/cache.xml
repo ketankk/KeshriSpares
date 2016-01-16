@@ -2,11 +2,81 @@
 <items version="2" >
 
     <item
-        jar="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/incremental-classes/debug/classes.jar"
+        jar="/home/sultan_mirza/StudioProjects/Android-master/app/libs/volley.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="4d9f40ca89d2fcd866bdd9221d429a6e1e4b2a02">
-        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/classes_e07c858aead210238e3c76f79fe6715eebc2fbdd.jar" />
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/volley_dfb13413df4c549b28ff2339d5ee13260bf7287f.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.androidplot/androidplot-core/0.9.4/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3ed59a79f48ba9ed951c355b9da2af07c69429bc">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/com.androidplot-androidplot-core-0.9.4_ca89f93cedf6e5eb8dfb9dfb8ded2ef590d6a8b1.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_2897ba13a16ffa3c6c6eed125b1e7f50c498950b.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_8ec4d80dad56b0db43bbc8d85aa33fcc3ac7a23f.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.9.1/c261495d1e01df849cdb3cbc941564018f0d3539/joda-time-2.9.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c261495d1e01df849cdb3cbc941564018f0d3539">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/joda-time-2.9.1_25cfa42a081c76c862f172bc50372f1cbdf565fc.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_7548fc8a6279f9546b8cf879a193c0b0530f15c2.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_81baf9272c45b230b4f82496d05c57354add6389.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/android-sdks/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_f472c5aed0953b6319eb87f29932f17ec6872494.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/.gradle/caches/modules-2/files-2.1/com.github.PhilJay/MPAndroidChart/v2.1.6/b036abbb61656165da99cf44898e4b9123687e65/MPAndroidChart-v2.1.6.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b036abbb61656165da99cf44898e4b9123687e65">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/MPAndroidChart-v2.1.6_6313c12be72f950bfabc8ea3f4320cec0485ee9d.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_e525bca40d03b0d021c4842f1fdfc69e646591ea.jar" />
+    </item>
+    <item
+        jar="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_084ce6af251066318590aacdbd7d79ff16058669.jar" />
     </item>
 
 </items>

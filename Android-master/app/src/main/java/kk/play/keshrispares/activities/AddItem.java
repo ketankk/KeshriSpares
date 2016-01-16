@@ -25,10 +25,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class AddItem extends Activity implements OnClickListener {
 
+	private TextView addHeader;
 	private EditText compname;
     private EditText modelname;
 
@@ -66,7 +69,7 @@ public class AddItem extends Activity implements OnClickListener {
 		setContentView(R.layout.activity_add_item);
 		Bundle extras=getIntent().getExtras();
         comingfrom=extras.getString("ComingFrom");
-
+addHeader=(TextView)findViewById(R.id.addheader);
 		addButton = (Button) findViewById(R.id.addButton);
 
 		//
@@ -110,12 +113,26 @@ public class AddItem extends Activity implements OnClickListener {
         if(comingfrom.equals("typecomp")) {
              companyName_ = extras.getString("compname");
             type_ = extras.getString("type");
-            type.setVisibility(View.GONE);
-            compname.setVisibility(View.GONE);
+			addHeader.setText("Add Item to "+companyName_+"("+type_+")");
+
+			TableRow typerow=(TableRow)findViewById(R.id.addtyperow);
+			typerow.setVisibility(View.GONE);
+
+			TableRow comprow=(TableRow)findViewById(R.id.addcomprow);
+
+			comprow.setVisibility(View.GONE);
+
+			/*type.setVisibility(View.GONE);
+            compname.setVisibility(View.GONE);*/
         }
         if(comingfrom.equals("type")) {
             type_ = extras.getString("type");
-            type.setVisibility(View.GONE);
+			addHeader.setText("Add Item to "+type_);
+
+			TableRow row=(TableRow)findViewById(R.id.addtyperow);
+
+            row.setVisibility(View.GONE);
+
         }
 		addButton.setOnClickListener(this);
 		image.setOnClickListener(new OnClickListener() {
@@ -161,10 +178,13 @@ public class AddItem extends Activity implements OnClickListener {
 
         if(comingfrom.equals("type")||comingfrom.equals("typecomp")) {
             inputType = type_;
-            if (comingfrom.equals("typecomp"))
-                inputcompName = companyName_;
+            if (comingfrom.equals("typecomp")) {
+				inputcompName = companyName_;
+			}
             else
-                inputcompName = compname.getText().toString();
+			{inputcompName = compname.getText().toString();
+
+			}
         }
         else {
             inputcompName = compname.getText().toString();

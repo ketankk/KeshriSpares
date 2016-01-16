@@ -6,30 +6,35 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activities.AddItem" >
+    tools:context="kk.play.keshrispares.activities.AddItem" >
 
     <LinearLayout
-        android:layout_above="@+id/scrollview"
+        android:id="@+id/scrollviewheader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
         <TextView
+            android:id="@+id/addheader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="50sp"
+            android:textSize="20sp"
             android:text="@string/titleadditem" />
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollviewheader"
+        >
 
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
             <TableRow
+                android:id="@+id/addcomprow"
+
                 android:layout_width="150dp"
                 android:layout_height="10dp" >
 
@@ -64,15 +69,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Image" />
+                    android:text="Image"
+                    android:layout_marginTop="20dp"
+                    />
 
                 <ImageView
                     android:id="@+id/itemimage"
-                    android:layout_width="100dp"
-                    android:layout_height="200dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:clickable="true"
-                    android:src="@drawable/abc_btn_check_material"
-                    android:width="150dp" />
+                    android:src="@drawable/error"
+                    android:layout_marginRight="250dp"
+                    android:maxHeight="50dp"
+                    />
             </TableRow>
 
             <TableRow>
@@ -100,7 +109,7 @@
                     android:id="@+id/color"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#000000" />
+                    android:background="#0ef7e0" />
             </TableRow>
 
             <TableRow>
@@ -131,7 +140,9 @@
                     android:inputType="number" />
             </TableRow>
 
-            <TableRow>
+            <TableRow
+                android:id="@+id/addtyperow"
+                >
 
                 <TextView
                     android:layout_width="match_parent"
@@ -142,7 +153,7 @@
                     android:id="@+id/type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#000000" />
+                    android:background="#dfdc07" />
             </TableRow>
 
             <TableRow>

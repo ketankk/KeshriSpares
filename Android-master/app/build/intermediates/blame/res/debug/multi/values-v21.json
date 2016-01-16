@@ -11,13 +11,13 @@
                     "endOffset": 119
                 },
                 "from": {
-                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values-v21/values-v21.xml",
+                    "file": "/home/sultan_mirza/StudioProjects/Android-master/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-v21/values-v21.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 281,
+                        "startOffset": 223,
                         "endColumn": 68,
-                        "endOffset": 345
+                        "endOffset": 287
                     }
                 }
             },
