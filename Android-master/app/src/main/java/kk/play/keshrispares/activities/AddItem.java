@@ -9,6 +9,7 @@ import kk.play.keshrispares.database.CyclesItemDBHandler;
 import kk.play.keshrispares.entity.Cycle;
 import kk.play.keshrispares.utils.CalendarUtil;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -18,8 +19,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -66,7 +69,11 @@ public class AddItem extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_ACTION_BAR);
 		setContentView(R.layout.activity_add_item);
+		ActionBar actionBar=getActionBar();
+		if(actionBar!=null)actionBar.setHomeButtonEnabled(true);
+
 		Bundle extras=getIntent().getExtras();
         comingfrom=extras.getString("ComingFrom");
 addHeader=(TextView)findViewById(R.id.addheader);
@@ -293,4 +300,14 @@ addHeader=(TextView)findViewById(R.id.addheader);
 		price.setText("");
 	}
 
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch (item.getItemId()){
+			case android.R.id.home:
+				onBackPressed();
+				return true;
+		default:
+		return super.onOptionsItemSelected(item);
+	}}
 }

@@ -139,6 +139,7 @@ String CURRENT_DATE[]=CalendarUtil.getCurrentDate().split("-");
                             if(flag) {
                                 showSnackbar(updatedQuantity + " " + cycle.getModelName() + " Added");
                             quantView.setText(cycle.getQuantity()+updatedQuantity+"");
+                                cycle.setQuantity(cycle.getQuantity()+updatedQuantity);
 
                             }
 
@@ -163,6 +164,8 @@ String CURRENT_DATE[]=CalendarUtil.getCurrentDate().split("-");
                             if(flag) {
                                 showSnackbar(updatedQuantity + " " + cycle.getModelName() + " Sold");
                                 quantView.setText(cycle.getQuantity()-updatedQuantity+"");
+                                cycle.setQuantity(cycle.getQuantity()-updatedQuantity);
+
 
                             }
                         }
